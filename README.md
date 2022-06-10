@@ -27,7 +27,7 @@
 
 - [x] Long press the black bubble to clean all network logs.
 
-- [x] Detect *FPS*.
+- [x] Detect *UI Blocking*.
 
 - [x] List crash errors.
 
@@ -62,7 +62,7 @@ github  "CocoaDebug/CocoaDebug"
 
 ### *Framework*
 
-*[CocoaDebug.framework](https://raw.githubusercontent.com/CocoaDebug/CocoaDebug/master/CocoaDebug.framework.zip) (Version 1.7.1)*
+*[CocoaDebug.framework](https://raw.githubusercontent.com/CocoaDebug/CocoaDebug/master/CocoaDebug.framework.zip) (Version 1.7.2)*
 
 > WARNING: Never ship a product which has been linked with the CocoaDebug framework. The [Integration Guide](https://github.com/CocoaDebug/CocoaDebug/wiki/Integration-Guide) outline a way to use build configurations to isolate linking the framework to Debug builds.
 
@@ -93,8 +93,6 @@ When you initialize CocoaDebug, you can customize the following parameter values
 
 - `additionalViewController` - Add an additional UIViewController as child controller of CocoaDebug's main UITabBarController. Default value is **nil**.
 
-- `logMaxCount` - The maximum count of logs which CocoaDebug display. Default value is **1000**.
-
 - `emailToRecipients` - Set the initial recipients to include in the email’s “To” field when share via email. Default value is **nil**.
 
 - `emailCcRecipients` - Set the initial recipients to include in the email’s “Cc” field when share via email. Default value is **nil**.
@@ -106,3 +104,7 @@ When you initialize CocoaDebug, you can customize the following parameter values
 ## Thanks
 
 Special thanks to [remirobert](https://github.com/remirobert).
+
+## Reference
+
+[https://developer.apple.com/library/archive/samplecode/CustomHTTPProtocol/Introduction/Intro.html](https://developer.apple.com/library/archive/samplecode/CustomHTTPProtocol/Introduction/Intro.html)

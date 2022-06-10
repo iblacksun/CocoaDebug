@@ -156,17 +156,17 @@ extension Data {
             return str
         } else {
             //2.protobuf
-//            if let message = try? GPBMessage.parse(from: self) {
-//                if message.serializedSize() > 0 {
-//                    return message.description
-//                } else {
-//                    //3.utf-8 string
-//                    return String(data: self, encoding: .utf8)
-//                }
-//            } else {
-                //3.utf-8 string
-                return String(data: self, encoding: .utf8)
-//            }
+            //            if let message = try? GPBMessage.parse(from: self) {
+            //                if message.serializedSize() > 0 {
+            //                    return message.description
+            //                } else {
+            //                    //3.utf-8 string
+            //                    return String(data: self, encoding: .utf8)
+            //                }
+            //            } else {
+            //3.utf-8 string
+            return String(data: self, encoding: .utf8)
+            //            }
         }
     }
 }
@@ -205,17 +205,17 @@ extension UIView {
     }
 }
 
-extension NSObject {
-    func dispatch_main_async_safe(callback: @escaping ()->Void ) {
-        if Thread.isMainThread {
-            callback()
-        } else {
-            DispatchQueue.main.async( execute: {
-                callback()
-            })
-        }
-    }
-}
+//extension NSObject {
+//    func dispatch_main_async_safe(callback: @escaping ()->Void ) {
+//        if Thread.isMainThread {
+//            callback()
+//        } else {
+//            DispatchQueue.main.async( execute: {
+//                callback()
+//            })
+//        }
+//    }
+//}
 
 //https://stackoverflow.com/questions/26244293/scrolltorowatindexpath-with-uitableview-does-not-work
 ///tableView
@@ -244,7 +244,7 @@ extension UITableView {
     
     func reloadData(completion: @escaping () -> ()) {
         UIView.animate(withDuration: 0, animations: { self.reloadData()})
-        {_ in completion() }
+            {_ in completion() }
     }
 }
 
@@ -344,7 +344,6 @@ extension CocoaDebug {
         CocoaDebugSettings.shared.logSearchWordRN = nil
         CocoaDebugSettings.shared.logSearchWordWeb = nil
         CocoaDebugSettings.shared.networkSearchWord = nil
-        CocoaDebugSettings.shared.logMaxCount = CocoaDebug.logMaxCount
         CocoaDebugSettings.shared.protobufTransferMap = protobufTransferMap
         CocoaDebugSettings.shared.additionalViewController = additionalViewController
         
@@ -360,15 +359,15 @@ extension CocoaDebug {
         
         //slow animations
         CocoaDebugSettings.shared.slowAnimations = false
-                
+        
         //log
         let enableLogMonitoring = UserDefaults.standard.bool(forKey: "enableLogMonitoring_CocoaDebug")
         if enableLogMonitoring == false {
             _SwiftLogHelper.shared.enable = false
-            _OCLogHelper.shared()?.enable = false
+//            _OCLogHelper.shared()?.enable = false
         } else {
             _SwiftLogHelper.shared.enable = true
-            _OCLogHelper.shared()?.enable = true
+//            _OCLogHelper.shared()?.enable = true
         }
         
         //network
@@ -385,7 +384,7 @@ extension CocoaDebug {
         WindowHelper.shared.disable()
         _NetworkHelper.shared().disable()
         _SwiftLogHelper.shared.enable = false
-        _OCLogHelper.shared()?.enable = false
+//        _OCLogHelper.shared()?.enable = false
         CrashLogger.shared.enable = false
         CocoaDebugSettings.shared.responseShake = false
     }
