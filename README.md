@@ -1,7 +1,7 @@
 | <img alt="logo" src="https://raw.githubusercontent.com/CocoaDebug/CocoaDebug/master/pic/logo.png" width="250"/> | <ul align="left"><li><a href="#introduction">Introduction</a><li><a href="#installation">Installation</a><li><a href="#usage">Usage</a><li><a href="#parameters">Parameters</a></ul> |
 | -------------- | -------------- |
 | Version | [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/CocoaDebug.svg)](https://img.shields.io/cocoapods/v/CocoaDebug.svg) |
-| Platform | ![Platform](https://img.shields.io/badge/platforms-iOS%208.0+-blue.svg) |
+| Platform | ![Platform](https://img.shields.io/badge/platforms-iOS%2012.0+-blue.svg) |
 | Languages | ![Languages](https://img.shields.io/badge/languages-Swift%20%7C%20ObjC-blue.svg) |
 
 <span style="float:none" />
@@ -16,6 +16,8 @@
 <img src="https://raw.githubusercontent.com/CocoaDebug/CocoaDebug/master/pic/a6.png" width="250">
 
 ## Introduction
+
+- [x] As similar with [Charles](https://www.charlesproxy.com/) in your App.
 
 - [x] Shake to hide or show the black bubble. (Support iPhone device and simulator)
 
@@ -66,8 +68,6 @@ github  "CocoaDebug/CocoaDebug"
 
 > WARNING: Never ship a product which has been linked with the CocoaDebug framework. The [Integration Guide](https://github.com/CocoaDebug/CocoaDebug/wiki/Integration-Guide) outline a way to use build configurations to isolate linking the framework to Debug builds.
 
-> [Xcode12 build error solution](https://stackoverflow.com/questions/63267897/building-for-ios-simulator-but-the-linked-framework-framework-was-built)
-
 ## Usage
 
 - Don't need to do anything. CocoaDebug will start automatically.
@@ -100,10 +100,6 @@ When you initialize CocoaDebug, you can customize the following parameter values
 - `mainColor` - Set CocoaDebug's main color with hexadecimal format. Default value is **#42d459**.
 
 - `protobufTransferMap` - Protobuf data transfer to JSON map. Default value is **nil**.
-
-## Thanks
-
-Special thanks to [remirobert](https://github.com/remirobert).
 
 ## Reference
 
